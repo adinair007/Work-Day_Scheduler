@@ -10,12 +10,12 @@ function background() {
 
 //--Creating time-block loops--
     $(".time-block").each(function(){
-        var timeBlockID = parseInt($(this).attr("id"));
+        var timeSlot = parseInt($(this).attr("id"));
     //--Color will change according to current time--
-        if (timeBlockID < currentTime) {
+        if (timeSlot < currentTime) {
         $(this).addClass("past");
 
-        }else if (timeBlockID === currentTime) {
+        }else if (timeSlot === currentTime) {
         $(this).removeClass("past");
         $(this).removeClass("future");
         $(this).addClass("present");
